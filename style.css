@@ -106,4 +106,8 @@ body {
   .content p {
     text-align: left;
   }
+
+  #page1 .page1-bg {
+    display: none;
+  }
 }

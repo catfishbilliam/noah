@@ -1,0 +1,80 @@
+:root {
+    --blue-1: #638496;
+    --blue-2: #567b89;
+    --blue-3: #39546d;
+    --blue-4: #283f54;
+    --blue-5: #13273e;
+  }
+  
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blue-4);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body {
+    margin: 0;
+    padding-top: 152px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    background: var(--blue-5);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    width: 100%;
+  }
+  
+  .page.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .content h1 {
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .page {
+      padding: 20px 10px;
+    }
+    .content {
+      max-width: 100%;
+      margin: 0 20px;
+    }
+    .content h1 {
+      font-size: 1.8em;
+      text-align: center;
+    }
+  }
